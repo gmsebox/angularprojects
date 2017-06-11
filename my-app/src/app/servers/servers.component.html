@@ -1,2 +1,29 @@
+<label>Server Name</label>
+<input
+    type="text"
+    class="form-control"
+    (input)="onUpdateServerName($event)">
+    <p>{{serverName}}</p>
+<button class="btn btn-primary" 
+[disabled]="!allowNewServer" 
+(click)="onServerCreation()">Add Servers</button>
+
+<p>{{allowNewServer}}</p>
+<p [innerText] = "allowNewServer"></p>
+<p>{{serverCreationStatus}}</p>
 <app-server></app-server>
 <app-server></app-server>
+<table
+ class="table table-hover table-striped table-bordered table-condensed">
+ <thead>
+     <th>ServerName</th>
+ </thead>
+ <tbody>
+     <tr *ngFor="let server of serverList">{{server}}</tr>
+ </tbody>
+</table>
+<ul>
+      <li *ngFor="let server of serverList">
+        {{ server }}
+      </li>
+    </ul>
