@@ -6,10 +6,10 @@ import {Component, OnInit} from '@angular/core';
 })
 
 export class ServerComponent implements OnInit {
- serverId=10;
+ serverId='10';
  serverStatus='offline';
 
- constructor(id, status) { 
+ constructor(id:string,status:string) { 
      this.serverId = id;
      this.serverStatus = status;
   }
