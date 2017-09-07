@@ -1,0 +1,8 @@
+<p>
+  <label>Assignment 1: Enter value for new load</label>
+  <input type="text" name="input" [(ngModel)]="newLoad">
+</p>
+<p>
+    <button class='btn btn-primary' (click)=updateLoad(newLoad)>Click to change</button>
+    current state: {{currentstate}}
+</p>
